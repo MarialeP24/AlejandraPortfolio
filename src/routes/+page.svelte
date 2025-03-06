@@ -1,7 +1,7 @@
 <script>
     import projects from "$lib/projects.json";
     import Project from "$lib/Project.svelte";
-    </script>
+</script>
 
 <h1> Alejandra</h1>
 
@@ -13,10 +13,13 @@
 
 <img src = "Images /Mota.jpeg" alt = "Merry Xmas from Mota">
 
-<h2>Latest Projects</h2>
+
+<h3>
+    Latest Projects
+</h3>
 
 <div class="projects">
-    {#each projects.slice(0, 3) as p}
-    <Project data={p} />
+    {#each projects.slice(0,3) as p}
+        <Project data={p} hLevel="3"/>
     {/each}
 </div>
