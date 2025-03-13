@@ -1,13 +1,11 @@
 
 
 <script>
-
+$:localStorage.colorScheme = colorScheme;
 let localStorage = globalThis.localStorage ?? {};
-let colorScheme = "light dark";
-
 let root = globalThis?.document?.documentElement;
 $: root?.style.setProperty("color-scheme", colorScheme);
-$:localStorage.colorScheme = colorScheme;
+let colorScheme = localStorage.colorScheme ?? "light dark";
 
 
 
