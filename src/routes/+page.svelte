@@ -14,9 +14,9 @@
 <img src = "Images /Mota.jpeg" alt = "Merry Xmas from Mota">
 
 
-<h3>
+<h2>
     Latest Projects
-</h3>
+</h2>
 
 <div class="projects">
     {#each projects.slice(0,3) as p}

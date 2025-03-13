@@ -12,54 +12,46 @@ function $$ (selector, context = document) {
 // }
 
 
-let pages = [
-	{url: "./", title: "Home"},
-	{url: "projects", title: "Projects"},
-    {url: "contact", title: "Contact"},
-    {url: "resume", title: "Resume"},
-    {url: "https://github.com/MarialeP24", title: "GitHub"},
-];
-let nav = document.createElement("nav");
-document.body.prepend(nav)
+// let pages = [
+// 	{url: "./", title: "Home"},
+// 	{url: "projects", title: "Projects"},
+//     {url: "contact", title: "Contact"},
+//     {url: "resume", title: "Resume"},
+//     {url: "https://github.com/MarialeP24", title: "GitHub"},
+// ];
+// let nav = document.createElement("nav");
+// document.body.prepend(nav)
 
 
+// for (let p of pages) {
+// 	let url = p.url;
+// 	let title = p.title;
 
 
-for (let p of pages) {
-	let url = p.url;
-	let title = p.title;
+// 	let a = document.createElement("a");
+// a.href = url;
+// a.textContent = title;
+// nav.append(a)
+// }
 
+// if (a.host === location.host && a.pathname === location.pathname) {
+//     a.classList.add("current");
+// }
 
-	let a = document.createElement("a");
+// if (a.host !== location.host) {
+//     a.target = "_blank";
+// }
 
-a.href = url;
-a.textContent = title;
-nav.append(a)
-}
-
-if (a.host === location.host && a.pathname === location.pathname) {
-    a.classList.add("current");
-}
-
-if (a.host !== location.host) {
-    a.target = "_blank";
-}
-
-
-
-
-
-
-document.body.insertAdjacentHTML("afterbegin", `
-	<label class="color-scheme">
-		Theme:
-		<select>
-			<option value="light dark">Auto</option>
-            <option value="dark">Dark</option>
-            <option value="light">Light</option>
-		</select>
-	</label>`
-)
+// document.body.insertAdjacentHTML("afterbegin", `
+// 	<label class="color-scheme">
+// 		Theme:
+// 		<select>
+// 			<option value="light dark">Auto</option>
+//             <option value="dark">Dark</option>
+//             <option value="light">Light</option>
+// 		</select>
+// 	</label>`
+// )
 
 let select = document.querySelector("select");
 
