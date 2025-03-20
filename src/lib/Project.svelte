@@ -5,9 +5,15 @@
 
 <article>
   <svelte:element this={"h" + hLevel}>{data.title}</svelte:element>
-  <p>{data.year}</p>
+  
   <img src={data.image} alt={data.title} />
-  <p>{data.description}</p>
+ 
+    <div>
+        <p>{data.description} </p>
+        <br>
+        <p> c. {data.year}</p>
+    </div>
+
 </article>
 
 <style>
@@ -15,6 +21,7 @@
     display: grid;
     grid-template-rows: subgrid; /* Note: subgrid is experimental and may not work in all browsers */
     grid-row: span 3;
+    font-variant-numeric: oldstyle-nums
   }
   
   article h2 {

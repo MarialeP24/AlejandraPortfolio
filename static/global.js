@@ -53,19 +53,19 @@ function $$ (selector, context = document) {
 // 	</label>`
 // )
 
-let select = document.querySelector("select");
+// let select = document.querySelector("select");
 
-select.addEventListener("input", function (event) {
-	console.log("color scheme changed to", event.target.value);
-    document.documentElement.style.setProperty("color-scheme", event.target.value);
-    localStorage.colorScheme = event.target.value;
-});
+// select.addEventListener("input", function (event) {
+// 	console.log("color scheme changed to", event.target.value);
+//     document.documentElement.style.setProperty("color-scheme", event.target.value);
+//     localStorage.colorScheme = event.target.value;
+// });
 
-if ("colorScheme" in localStorage) {
-    // set color schemee to the stored local value
-    document.documentElement.style.setProperty("color-scheme", localStorage.colorScheme);
-    select.value = localStorage.colorScheme;
-}
+// if ("colorScheme" in localStorage) {
+//     // set color schemee to the stored local value
+//     document.documentElement.style.setProperty("color-scheme", localStorage.colorScheme);
+//     select.value = localStorage.colorScheme;
+// }
 
 // STEP 5 (OPTIONAL)
 // Note: This is an optional part of the lab! If you want to do it, uncomment the lines below and fill in the TODOs. Otherwise, leave the lines commented out.

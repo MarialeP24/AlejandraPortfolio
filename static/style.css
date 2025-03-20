@@ -16,44 +16,7 @@ body {
     accent-color: var(--color-accent);
     
    }
-   nav ul,
-   nav li{
-    display: contents;
-   }
-
-   nav{
-    --border-color: oklch(50% 10% 200 / 40%);
-    display: flex;
-    border-bottom: 1px;
-    border-bottom-style: solid;
-    border-bottom-color:var(--border-color);
-    margin-bottom: 2em;
-    
-   }
-
-   nav a {
-   flex:1;
-   text-align: center;
-   text-decoration: none;
-   color: inherit;
-   text-align: center;
-   padding: 0.5em;
-   margin-bottom: 0.5em
-   }
-
-   nav a.current{ 
-    border-bottom: 0.4em;
-    border-bottom-style: solid;
-    border-bottom-color:var(--border-color);
-    margin-bottom: 0.1em
-
-   }
-
-   nav a:hover{
-    border-bottom: 0.4em;border-bottom-style: solid;border-bottom-color:var(--color-accent);
-    background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
-    margin-bottom: 0.1em
-   }
+   
 
    input,
    textarea,
@@ -64,10 +27,13 @@ body {
 form {display: grid;grid-template-columns: auto 1fr;gap:1em}
 button{grid-column: 1 / -1;}
 
-.projects{
+.projects {
+  margin-top: 1em;
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(15em,1fr));gap: 1em;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1em;
 }
+
 
 article{
   display: grid;
