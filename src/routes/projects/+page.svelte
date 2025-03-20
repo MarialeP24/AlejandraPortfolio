@@ -4,17 +4,27 @@
   import projects from "$lib/projects.json";
   import Project from "$lib/Project.svelte";
 
-  let rolledData = d3.rollups(projects, v => v.length, d => d.year);
-  let pieData = rolledData.map(([year, count]) => {
-    return { value: count, label: year };
-  });
+ // Make sure the variable definition is *outside* the block
+let pieData;
+
+$: {
+// Initialize to an empty object every time this runs
+    pieData = {};
+    
+// Calculate rolledData and pieData based on filteredProjects here
+    let rolledData = d3.rollups(filteredProjects, v => v.length, d => d.year);
+
+// We don't need 'let' anymore since we already defined pieData
+    pieData = rolledData.map(([year, count]) => {
+        return { value: count, label: year };
+    });
+}
+
   let query = "";
-$: filteredProjects = projects.filter(project => {
-    if (query) {
-      return project.title.includes(query);
-    }
-    return true;
-  });
+  $: filteredProjects = projects.filter(project => {
+	let values = Object.values(project).join("\n").toLowerCase();
+	return values.includes(query.toLowerCase());
+});
 
 
 </script>
