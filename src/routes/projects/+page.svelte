@@ -6,6 +6,8 @@
 
  // Make sure the variable definition is *outside* the block
 let pieData;
+let selectedYearIndex = -1;
+
 
 $: {
 // Initialize to an empty object every time this runs
@@ -25,7 +27,16 @@ $: {
 	let values = Object.values(project).join("\n").toLowerCase();
 	return values.includes(query.toLowerCase());
 });
+let selectedYear;
+$: selectedYear = selectedYearIndex > -1 ? pieData[selectedYearIndex].label : null;
 
+$: filteredByYear = filteredProjects.filter(project => {
+        if (selectedYear) {
+            return project.year === selectedYear;
+        }
+
+        return true;
+    });
 
 </script>
 
@@ -37,14 +48,15 @@ $: {
 <h1>PROJECTS { projects.length }</h1>
 
 
-<Pie data={pieData} />
+<Pie data={pieData} bind:selectedIndex={selectedYearIndex} />
+
 <input type="search" bind:value={query}
        aria-label="Search projects" placeholder="🔍 Search projects…" />
     
 
 
 <div class="projects">
-    {#each filteredProjects as p}
+    {#each filteredByYear as p}
     <Project data={p} />
     {/each}
 </div>

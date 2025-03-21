@@ -6,6 +6,9 @@ let arc = arcGenerator({
 	endAngle: 2 * Math.PI
 });
 export let data = [];
+export let selectedIndex = -1;
+
+
 
 let colors = d3.scaleOrdinal(d3.schemeTableau10);
 let sliceGenerator = d3.pie().value(d => d.value);
@@ -25,24 +28,33 @@ let arcs;
 </script> 
 
 
+
+
 <div class="container">
 
 <svg viewBox="-50 -50 100 100">
 	<path d={arc} fill="red" />
     {#each arcs as arc, index}
-  <path d={ arc } fill={ colors(index) } />
-{/each}
+    <path 
+      d={arc} 
+      fill={colors(index)}
+      class:selected={selectedIndex === index}
+      on:click={e => selectedIndex = selectedIndex === index ? -1 : index} />
+  {/each}
 
 </svg>
 
 <ul class="legend">
-	{#each data as d, index}
-		<li style="--color: { colors(index) }">
-			<span class="swatch"></span>
-			{d.label} <em>({d.value})</em>
-		</li>
-	{/each}
-</ul>
+    {#each data as d, index}
+      <li 
+        style="--color: {colors(index)}"
+        class:selected={selectedIndex === index}
+        on:click={() => selectedIndex = selectedIndex === index ? -1 : index}>
+        <span class="swatch"></span>
+        {d.label} <em>({d.value})</em>
+      </li>
+    {/each}
+  </ul>
 </div>
 
 <style>
@@ -85,4 +97,39 @@ svg {
     background-color: var(--color);
     border-radius: 50%; /* makes the swatch a circle */
   }
+
+  svg:has(path:hover) path:not(:hover) {
+	opacity: 10%;
+}
+path {
+	transition: 300ms;
+    cursor: pointer;
+}
+
+path:hover {
+	opacity: 100% !important;
+}
+
+/* When a path is selected, make all non-selected paths 50% opacity */
+svg:has(.selected) path:not(.selected) {
+   opacity: 10%;
+}
+
+.selected {
+	--color: oklch(60% 45% 0) !important;
+	
+	&:is(path) {
+		fill: var(--color) !important;
+	}
+	
+	&:is(li) {
+		color: var(--color);
+	}
+}
+
+ul:has(.selected) li:not(.selected) {
+	color: gray;
+}
+
+
 </style>
