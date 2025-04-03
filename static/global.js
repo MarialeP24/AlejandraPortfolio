@@ -1,7 +1,7 @@
 console.log("IT’S ALIVE!");
 
-function $$ (selector, context = document) {
-	return Array.from(context.querySelectorAll(selector));
+function $$(selector, context = document) {
+  return Array.from(context.querySelectorAll(selector));
 }
 
 // step 2
@@ -10,7 +10,6 @@ function $$ (selector, context = document) {
 // if (currentLink) { // or if (currentLink !== undefined)
 // 	currentLink.classList.add("current");
 // }
-
 
 // let pages = [
 // 	{url: "./", title: "Home"},
@@ -22,11 +21,9 @@ function $$ (selector, context = document) {
 // let nav = document.createElement("nav");
 // document.body.prepend(nav)
 
-
 // for (let p of pages) {
 // 	let url = p.url;
 // 	let title = p.title;
-
 
 // 	let a = document.createElement("a");
 // a.href = url;
@@ -79,12 +76,11 @@ function $$ (selector, context = document) {
 //     event.preventDefault();
 //     let data = new FormData(form);
 
-    // let url = form.action + "?";
-    // for (let [name, value] of data) {
-	//     url += (name + "=" + value + "&")
-	//     console.log(name, value);
-    // }
+// let url = form.action + "?";
+// for (let [name, value] of data) {
+//     url += (name + "=" + value + "&")
+//     console.log(name, value);
+// }
 
-        // TODO: open url here!
+// TODO: open url here!
 // })
-

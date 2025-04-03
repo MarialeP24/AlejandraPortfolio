@@ -1,77 +1,77 @@
 [
-	{
-		"title": "A1 - U.S. Population, 1900 vs. 2000",
-		"year": "2025",
-		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Data, Visualization, and Housing"
-	},
-	{
-		"title": "A2 - Subtheme: Zoning and Housing Supply",
-		"year": "2025",
-		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Exploratory Visual Analysis"
-	},
-	{
-		"title": "A3 - New Covid-19 Cases in the United States",
-		"year": "2025",
-		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Visualization Critique & Redesign"
-	},
-	{
-		"title": "A4 - Persuasive or Deceptive Visualization? .",
-		"year": "2025",
-		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "All racial groups experience equal treatment in the NYPD civilian complaint process?"
-	},
+  {
+    "title": "A1 - U.S. Population, 1900 vs. 2000",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Data, Visualization, and Housing"
+  },
+  {
+    "title": "A2 - Subtheme: Zoning and Housing Supply",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Exploratory Visual Analysis"
+  },
+  {
+    "title": "A3 - New Covid-19 Cases in the United States",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Visualization Critique & Redesign"
+  },
+  {
+    "title": "A4 - Persuasive or Deceptive Visualization? .",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "All racial groups experience equal treatment in the NYPD civilian complaint process?"
+  },
 
-	{
-		"title": "Slabscapes",
-		"year": "2024",
-		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "SLAB SCAPES is a participatory tool that reimagines losas deportivas as inclusive public spaces. Through mapping, community engagement, and modular interventions, it helps local governments make these areas accessible to women, children, and older adults."
-	},
+  {
+    "title": "Slabscapes",
+    "year": "2024",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "SLAB SCAPES is a participatory tool that reimagines losas deportivas as inclusive public spaces. Through mapping, community engagement, and modular interventions, it helps local governments make these areas accessible to women, children, and older adults."
+  },
 
-	{
-		"title": "ENCO",
-		"year": "2024",
-		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "ENCO is a women-led social enterprise that improves energy access in public spaces through low-cost solar modules. Providing connectivity, lighting, safety, and shade, these units create more equitable urban environments while enabling mobile charging."
-	},
-	{
-		"title": "Modular Schools",
-		"year": "2023",
-		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Modular Schools is a rapid-response initiative by Minedu and Pronied, providing safe, modular classrooms for schools in emergencies or remote areas. Designed for quick assembly and a 10-year lifespan, they ensure quality learning while permanent solutions are developed."
-	},
-	
-	{
-		"title": "Recreo Malambo",
-		"year": "2022",
-		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Recreo Malambo is a community space that fosters play, social interaction, and childhood development. With modular volumes, playful circuits, and shaded areas, it transforms an underutilized site into a vibrant hub for families and caregivers."
-	},
-	{
-		"title": "The NYP",
-		"year": "2022",
-		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "The NYP is a modular public bathroom that repurposes parking spaces to address New York City's restroom shortage. Designed for accessibility and urban equity, it provides a flexible, dignified solution to meet the city's urgent sanitary needs."
-	},
-	{
-		"title": "Mercado Calle",
-		"year": "2021",
-		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Mercado Post-COVID-19 Competition– This project balances existing market dynamics with a regulated, health-conscious design. It dignifies vendors, enhances customer experience, and repositions the market as a cultural, gastronomic, and tourist hub in Lima."
-	},
-	{
-		"title": "EAUSS Workshop",
-		"year": "2018",
-		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "A Line to Remember / A Line of Defense – In this Santiago workshop, students designed a line as a spatial and architectural gesture rather than a megastructure. This line defines place, scale, and intention within the territory."
-	},
-	{
-		"title": "Playscapes",
-		"year": "2017",
-		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Linear Play Park on the Lurín Riverbank is an experimental public space that integrates play in its design. The infrastructure sets the stage, while users shape their own experiences—exploring, interacting, and transforming the space freely."
-	}
+  {
+    "title": "ENCO",
+    "year": "2024",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "ENCO is a women-led social enterprise that improves energy access in public spaces through low-cost solar modules. Providing connectivity, lighting, safety, and shade, these units create more equitable urban environments while enabling mobile charging."
+  },
+  {
+    "title": "Modular Schools",
+    "year": "2023",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Modular Schools is a rapid-response initiative by Minedu and Pronied, providing safe, modular classrooms for schools in emergencies or remote areas. Designed for quick assembly and a 10-year lifespan, they ensure quality learning while permanent solutions are developed."
+  },
+
+  {
+    "title": "Recreo Malambo",
+    "year": "2022",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Recreo Malambo is a community space that fosters play, social interaction, and childhood development. With modular volumes, playful circuits, and shaded areas, it transforms an underutilized site into a vibrant hub for families and caregivers."
+  },
+  {
+    "title": "The NYP",
+    "year": "2022",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "The NYP is a modular public bathroom that repurposes parking spaces to address New York City's restroom shortage. Designed for accessibility and urban equity, it provides a flexible, dignified solution to meet the city's urgent sanitary needs."
+  },
+  {
+    "title": "Mercado Calle",
+    "year": "2021",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Mercado Post-COVID-19 Competition– This project balances existing market dynamics with a regulated, health-conscious design. It dignifies vendors, enhances customer experience, and repositions the market as a cultural, gastronomic, and tourist hub in Lima."
+  },
+  {
+    "title": "EAUSS Workshop",
+    "year": "2018",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "A Line to Remember / A Line of Defense – In this Santiago workshop, students designed a line as a spatial and architectural gesture rather than a megastructure. This line defines place, scale, and intention within the territory."
+  },
+  {
+    "title": "Playscapes",
+    "year": "2017",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Linear Play Park on the Lurín Riverbank is an experimental public space that integrates play in its design. The infrastructure sets the stage, while users shape their own experiences—exploring, interacting, and transforming the space freely."
+  }
 ]
