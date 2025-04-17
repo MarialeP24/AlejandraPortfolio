@@ -2,7 +2,9 @@
 	import * as d3 from 'd3';
 	import { onMount } from "svelte";
 	import { computePosition, autoPlacement, offset } from '@floating-ui/dom';
-  
+	import Bar from '$lib/Bar.svelte';
+
+
 	let data = [];
 	let commits = [];
 	let averageFileLength = 0;
@@ -11,6 +13,19 @@
 	let tooltipPosition = { x: 0, y: 0 };
 	let hoveredIndex = -1;
 	$: hoveredCommit = commits[hoveredIndex] ?? {};
+	let clickedCommits = [];
+
+	$: allTypes = Array.from(new Set(data.map(d => d.type)));
+
+	$: selectedLines = (clickedCommits.length > 0 ? clickedCommits : commits).flatMap(d => d.lines);
+
+	$: selectedCounts = d3.rollup(
+    selectedLines,
+    v => v.length,
+    d => d.type
+	);
+	$: languageBreakdown = allTypes.map(type => [type, selectedCounts.get(type) || 0]);
+
   
 	onMount(async () => {
 	  data = await d3.csv("/loc.csv", row => ({
@@ -102,6 +117,20 @@
 	else if (evt.type === "mouseleave") {
 		hoveredIndex = -1
 	}
+	
+	else if (evt.type === "click") {
+	let commit = commits[index]
+	if (!clickedCommits.includes(commit)) {
+		// Add the commit to the clickedCommits array
+		clickedCommits = [...clickedCommits, commit];
+	}
+	else {
+			// Remove the commit from the array
+			clickedCommits = clickedCommits.filter(c => c !== commit);
+	}
+	console.log(clickedCommits);
+}
+
 }
 
   </script>
@@ -133,6 +162,8 @@
 	<g class="dots">
 	  {#each commits as commit, index}
 		<circle
+		class:selected={ clickedCommits.includes(commit) }
+		  on:click={ evt => dotInteraction(index, evt) }
 		  cx={xScale(commit.datetime)}
 		  cy={yScale(commit.hourFrac)}
 		  r="5"
@@ -144,6 +175,8 @@
 	</g>
   </svg>
   
+  <Bar data={languageBreakdown} width={width} />
+
   <dl
 	class="info tooltip"
 	bind:this={commitTooltip}
@@ -219,6 +252,9 @@ transform-box: fill-box;
 		transform: scale(1.5);
 	}
 	
+}
+.selected {
+    fill: var(--color-accent);
 }
   </style>
   
